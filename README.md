@@ -1,2 +1,1 @@
-# trybe-exercicios
-Repositório para os exercícios feito na escola Trybe
+Meu repositório de exercícios.
