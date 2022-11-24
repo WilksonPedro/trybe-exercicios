@@ -11,7 +11,7 @@ if (angulosValidos) {
         console.log(true);
     } else {
         console.log(false);
-    
+
     };
 } else {
     console.log('erro:angulo invalido');
