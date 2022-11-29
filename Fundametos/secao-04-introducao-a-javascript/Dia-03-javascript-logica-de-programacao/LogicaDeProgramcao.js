@@ -4,8 +4,9 @@ O fatorial é representado pelo sinal !
 Com base nessas informações, crie um algoritmo que imprima na tela o fatorial de 10.
 */
 
-let num = 10;
-let fatorial = [];
-for (let index = 1; index < num.length; index += 1){
-     }
-console.log(fatorial);
+let num = 1;
+for (let index = 10; index > 0; index -= 1){
+    num *= index;
+    console.log(num);
+}
+console.log(num);
