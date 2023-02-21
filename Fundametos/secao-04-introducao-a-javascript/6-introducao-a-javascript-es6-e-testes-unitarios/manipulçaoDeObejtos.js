@@ -5,6 +5,7 @@ const pessoaEstudante = {
 
 }
 // deve-se chamar o objeto por "object" para ele responder e puxar o objeto criado
+//criando uma nova função para adicionar novos itens dentro do objeto
 const novaInformacao = (Object, novaPropriedade, valor) => {
     Object[novaPropriedade] = valor
 };
