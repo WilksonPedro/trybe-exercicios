@@ -10,7 +10,7 @@ Object.assign(destino, objeto1, objeto2, objeto3, objeto4);
 */
 
 // o Assign sempre ira copiar e substituir os valores dentro do objeto destino por um novo se ele for repetido.
-
+/*
 const person = {
     name: 'Alberto',
     lastName: 'Gomes',
@@ -29,6 +29,7 @@ const person = {
   
   Object.assign(person, info, family)
   console.log(person)
+  */
   
   /* Output
     { name: 'Alberto',
