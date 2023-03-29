@@ -5,16 +5,15 @@
 
 .form-text label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     font-size: 25px;
 }
 
 .form-text input {
-    background-color:cornflowerblue;
     box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.06);
     width: 100%;
     border: none;
     font-size: 24px;
-    padding: 24px;
+    padding: 3px;
     box-sizing: border-box; /* é util para layouts responsivos controlando o tamnho total de um elemento*/
 }

@@ -6,7 +6,7 @@ export default class FormText extends Component {
     return (
       <div className='form-text'>
       <label>{this.props.label}</label> {/* O this. esta referenciando a props label para que ela seja usado no app.js de forma dinamica */}
-      <input placeholder='Digite o seu nome'/>
+      <input placeholder={`${this.props.placeholder} ...`}/> {/*Usando interpolação da pra personalizar o placeholder */}
       </div>
     )
   }

@@ -1,13 +1,11 @@
 import Banner from './component/Banner';
-import FormText from './CampoText/FormText';
+import FormsCadastro from './formulario/FormsCadastro';
 
 function App() {
   return (
     <div className="App">
-      <Banner />
-      <FormText label="Nome"/>
-      <FormText label="Posição"/>
-      <FormText label="Representação"/>
+      <Banner /> {/* component com a imagem do banner*/}
+      <FormsCadastro />
     </div>
   );
 }
