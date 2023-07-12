@@ -1,23 +1,22 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+import validator from 'validator';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const campoDeTexto = document.querySelector('#value');
+const button = document.querySelector('#button');
+const seletor = document.querySelector('#option');
+const textoDeSaida = document.querySelector('#answer');
+const UUID_VERSION = 4;
 
-setupCounter(document.querySelector('#counter'))
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  // o preventDefaultevita que ao clicar no botão a pagina seja recarregada.
+  const campos = {
+    cpf: validator.isTaxID(campoDeTexto.value, 'pt-BR'),
+    hexColor: validator.isHexColor(campoDeTexto.value),
+    email: validator.isEmail(campoDeTexto.value),
+    uuid: validator.isUUID(campoDeTexto.value, UUID_VERSION),
+    url: validator.isURL(campoDeTexto.value),
+    // Aqui estamos usando o framework de validação para validar so campos
+  };
+
+  textoDeSaida.innerHTML = `A validação retornou ${campos[seletor.value]}`;
+});

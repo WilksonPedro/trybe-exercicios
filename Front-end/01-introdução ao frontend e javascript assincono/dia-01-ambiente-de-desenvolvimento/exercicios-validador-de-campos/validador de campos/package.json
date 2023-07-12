@@ -1,14 +1,24 @@
 {
   "name": "validador-de-campos",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.1.0"
+    "vite": "^4.4.3"
+  },
+  "description": "um validador de campos simples",
+  "main": "main.js",
+  "keywords": [
+    "validador-de-campo"
+  ],
+  "author": "Wilkson Pedro da Silva",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.9.0"
   }
 }
