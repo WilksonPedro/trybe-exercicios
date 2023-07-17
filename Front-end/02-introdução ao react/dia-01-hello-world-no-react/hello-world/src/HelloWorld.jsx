@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-
 export default class HelloWorld extends Component {
   render() {
     return (
-      <>
+      <div>
       <h1>Muito prazer eu sou Wilkson!</h1><br />
       <h2>MInhas Habilidades desenvolvidas foram: </h2>
       <ul>
@@ -11,7 +10,7 @@ export default class HelloWorld extends Component {
         <li>CSS</li>
         <li>JAVASCRIPT</li>
       </ul>
-      </>
+      </div>
     )
   }
 }
