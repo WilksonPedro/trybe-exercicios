@@ -1,0 +1,18 @@
+{
+  "name": "bmi-em-node",
+  "version": "1.0.0",
+  "description": "exercicio de um calculo de imc usando node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bmi": "node bmi.js"
+  },
+  "keywords": [
+    "exercicio"
+  ],
+  "author": "wilkson",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
