@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "keywords": [],
   "author": "wilkson",
   "license": "ISC",
   "dependencies": {

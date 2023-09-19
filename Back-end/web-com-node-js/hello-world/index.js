@@ -1,7 +1,7 @@
 const readline = require('readline-sync');
-// require serve para importar uma biblioteca
+//podemos dar qualquer nome para a constante da importação
 
 const name = readline.question('Qual seu nome? ');
 const age = readline.questionInt('Qual sua idade? ');
 
-console.log(`Hello ${name}! vc tem ${age} anos!`);
+console.log(`Ola mundo! ${name} seja bem vindo!`);
