@@ -1,0 +1,38 @@
+# Este arquivo é usado para definir e execultar aplicações docker multi-container
+version: '3'
+services: # Define os serviços(cada serviço é um container) que serão execultados.
+  node:
+  # Faz o docker construir (build) de uma imagem personalizada
+    # baseada no arquivo Dockerfile
+    build:
+      dockerfile: ./dockerfile
+      context: .
+      # Diretório padrão de execução
+    working_dir: /app
+    # Lista de volumes (diretórios) mapeados de fora para dentro do container
+    volumes:
+      # Monta o diretório atual, com todos os dados da aplicação, dentro do diretório /app
+      - ./:/app
+    ports:
+      # Expõe a porta padrão da aplicação: altere aqui caso use outra porta
+      # na notação porta_de_fora:porta_de_dentro
+      - 3001:3001
+    environment:
+      # Aqui setamos nossas variáveis de ambiente - não se preocupe, mais para frente, ainda nesse dia, temos
+      # uma seção inteira destinada a explicá-las!
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_HOST: database
+      MYSQL_PORT: 3306
+    # Informa ao docker, para que o container node seja iniciado após o container database
+    depends_on:
+      - "database"
+
+  database:
+    image: mysql:8.0.29 # Define a imagem que sera usada
+    restart: always # Define como ira reiniciar o container
+    environment: # Define as variaveis de ambiente que serão usadas pelo conteiner
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: trybecashdb
+    ports: # Portas que serão usadas/expostas pelo container
+      - 33060:3306 #a porta do container 3306 conecta a porta 33060 do host

@@ -1,1 +1,0 @@
-Meu repositório de exercícios.
